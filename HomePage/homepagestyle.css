@@ -1,0 +1,267 @@
+/* General Styles */
+html{
+  scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Garamond,serif;    
+}
+
+/*---------- SLIDE ANIMATION --------------*/
+@keyframes slide_animation {
+  0%, 100% { left: 0; }
+  20%, 120% { left: -100%; }
+  140%, 240% { left: -200%; }
+  260%, 360% { left: -300%; }
+}
+
+@-webkit-keyframes slide_animation {
+  0%, 100% { left: 0; }
+  20%, 120% { left: -100%; }
+  140%, 240% { left: -200%; }
+  260%, 360% { left: -300%; }
+}
+.slider-frame {
+  overflow: hidden;
+  width: 100%;
+  height: 350px; /* Set the height of the slider frame to fit the screen */
+}
+
+.slide-images {
+  display: flex;
+  width: 400%; /* 4 images, each taking 100% of the width */
+  animation: slide_animation 16s linear infinite; /* Change 16s to adjust the speed and delay */
+}
+
+.img-container {
+  width: 25%; /* Each image takes up 25% of the width */
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%; /* Ensure images fill their container */
+  height: 350px; /* Ensure images fill the screen height */
+  object-fit: cover; /* Cover the entire container */
+}
+
+a {
+	text-decoration: none;
+	color: #e7e3e3;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* Header Styles */
+header {
+	background-color:black;
+	color: #e7e3e3; 
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;    
+}
+nav img {
+	height: 50px;
+}
+nav ul {
+	display: flex;
+}
+nav li {
+	margin: 0 10px;   
+}
+nav a {
+	color: #e7e3e3;
+	background-color: #ff5722;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16 px;}
+
+/* Banner Styles */
+.banner {
+	background-image: url("D:\Hackathon\img\உழவகம் (1).png");
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #e7e3e3;
+	text-align: center;
+	background-repeat: no-repeat;
+    background-color:black;
+}
+.banner img{
+    height: 350px;
+    width:1400px;
+}
+.banner h1 {
+	font-size: 56px;
+	margin: 0;
+    color:#e7e3e3;
+}
+.banner p {
+	font-size: 30px;
+	margin: 20px 0;
+	color: #e7e3e3;
+}
+.button {
+	background-color: #9a9797;
+	color: #333;
+	padding: 10px 20px;
+	border-radius: 25px;
+	font-size: 18px;
+}
+
+.sectionservices,.sectionvision,.sectionrole {
+    color: #e7e3e3;
+    background-color: #333;
+	padding: 50px;
+}
+.sectionservices h2,.sectionvision h2,.sectionrole h2{
+    color: #e7e3e3;
+    background-color: #333;
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+.sectionservices ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    color: #e7e3e3;
+    background-color: #333;
+}
+.sectionservices li,.sectionvision li,.sectionrole li {
+	width: 30%;
+	margin-bottom: 50px;
+    color: #e7e3e3;
+    background-color: #333;
+}
+.sectionservices i {
+	width: 100%;
+	border-radius: 10px;
+}
+.sectionservices h3,.sectionvision h3,.sectionrole h3 {
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 0;
+    color: #e7e3e3;
+    background-color: #333;
+}
+.sectionservices p,.sectionvision p,.sectionrole p {
+	font-size: 18px;
+	margin-top: 10px;
+    color: #e7e3e3;
+    background-color: #333;
+}
+
+
+.price {
+	color: #d7d73b;
+	display: block;
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+/*=========================sectionabout Us=========================*/
+.sectionabout {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+   }
+   
+.sectionabout-img {
+     max-width: 100%;
+     max-height:100%;
+     padding-left: 70px;
+     padding-bottom: 10px;
+   }
+   
+.sectionabout-text {
+    padding-left: 40px;
+    font-size: 20px;
+   }
+
+/*===============Footer===================*/
+.footer {
+  background-image: url("D:\Hackathon\img\உழவகம் (1).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: rgba(29, 86, 84, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.footer .links {
+  position: relative;
+  color: #fff;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.links ul {
+  list-style-type: none;
+  display: block;
+  margin-bottom: 10px;
+}
+.links h3 {
+  font-family: Barlow Condensed;
+  font-weight: normal;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+.links li {
+  font-family: Roboto;
+  cursor: pointer;
+  padding: 15px 0;
+  display: block;
+  margin-bottom: 10px;
+}
+.links a{
+    color:#F0F8FF
+}
+.links li:hover {
+  color: #ffa801;
+}
+@media all and (max-width: 708px) {
+  .footer {
+    width: 100%;
+    height: 670px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+footer {
+	background-color: #494545;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+footer p {
+	margin: 0;
+}
